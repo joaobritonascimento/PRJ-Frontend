@@ -2,7 +2,7 @@
 // 01 criar a váriavel
 xhttp = new XMLHttpRequest();
 var lista;
-var api = "https://joaobritonascimento.herokuapp.com/api/usuario";
+var api = "https://qua-209050.herokuapp.com/api/usuario/";
 
 function listar() {
     // 02 definição do nosso request (forma e endereço)
@@ -73,4 +73,3 @@ function apagar() {
     }
 }
 listar();
-
