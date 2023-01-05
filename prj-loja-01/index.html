@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>Virtual Eletronicos v2</title>
 </head>
 <body>
@@ -14,43 +14,69 @@
         }
         #banner{
             background-color: black;
-            padding: 10px 100px 200px 10px;
+            padding: 10px 10px 10px 10px;
+            width:100%;
+            position:fixed;
+            top:10px;
+
         }
 
         #banner img{
-            width: 200px;
-            height: 100px;
+            width:30%;
+            height: 30%;
             float: left;
             margin-right: 30px;
         }
 
         #banner h1{
             color: aqua;
-            text-align: center;
+            /*text-align: center;*/
             margin-top: auto;
             }
+
         #container {
-            margin:10px 200px 150px 10px;
+            margin:20px 200px 150px 10px;
+            
         }
         #container img{
             height: 100px;
-            margin: 30px;
-            padding-left: 30px;
+            margin: 20px;
+            padding-left: 10px;
         }
         .produto{
-            border: solid black 2px;
-            width: 200px;
+            border: solid rgb(132, 133, 192) 5px;
+            height: 210px;
+            width: 190px;
             float: left;
+            margin: 10px; /*Distancia entre os produtos*/
+            
         }
         .produto img{
             width: 70%;
-            height: 80%;
+            height: 70%;
         }
-        .produto .nome, .valor { 
+        .produto .nome{ 
             background-color: bisque;
-            color:blue;
+            color:rgb(29, 23, 2);
+            height: 15%;
+            display:flex;
+            justify-content: center;
+        }
+
+        .produto .valor{
+           justify-content: center;
+           display:flex;
+        }
+
+        /* Configuração para telas menores de 700px*/ 
+
+        @media only screen and (max-width: 700px){
+            #banner{
+                padding: 10px 10px 10px 10px;
+            }
         }
     </style>
+
     <div id="banner">
         <img src="imagens/comp.jpeg" style="height: 220px; align-items: center;" alt="">
         <h1>Virtual Eletronicos</h1>
