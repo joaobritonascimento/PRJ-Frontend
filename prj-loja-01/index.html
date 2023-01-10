@@ -56,7 +56,12 @@
             width: 190px;
             float: left;
             margin: 10px; /*Distancia entre os produtos*/
-            
+            cursor:pointer;
+            /*border-color: aqua;*/
+        }
+
+        .produto-selecionado{
+            border-color: aqua;
         }
         .produto img{
             width: 60%;
@@ -71,8 +76,11 @@
         }
 
         .produto .valor{
-           justify-content: center;
            display:flex;
+           align-items:center;
+           height: 15%;
+           padding-left:10px ;
+                      
         }
 
         #bt-fixo{
@@ -87,6 +95,28 @@
             position: fixed;
             bottom:30px;
             right: 10%;
+        }
+
+        #bt-fixo, #bt-fixo span {
+            background-color: aqua;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border:solid black 3px;
+            position: fixed;
+            bottom:30px;
+            right: 30%;
+             }
+
+        #bt-fixo span{
+            width: 20px;
+            height: 20px;
+            bottom: 95px;
+            background-color: black;
+            color:aqua;
         }
 
         /* Configuração para telas menores de 700px*/ 
@@ -113,7 +143,7 @@
     </div>
     <div id="container">
         <div class="ls-produto">
-            <div class="produto">
+            <div class="produto" onclick="addCarrinho(this)">
                 <img src="imagens/resistor.webp" alt="">
                 <p class="nome">Nome do Produto</p>
                 <p class="valor">R$ 0,30</p>
@@ -145,9 +175,16 @@
             </div>
         </div>
         <div id="bt-fixo">
-            <i style="font-size:52px" class="fa">&#xf07a;</i>
+            <div id="bt-principal">
+                <i style="font-size:54px" class="fa">&#xf07a;</i>
+                <span id="qt-produto">0</span>
+            </div>
         </div>
     </div>
-
+    <script>
+        function addCarrinho(){
+            document.getElementById("qt-produto").innerHTML=1;
+        }
+    </script>
 </body>
 </html>
