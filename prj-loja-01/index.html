@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <title>Virtual Eletronicos v2</title>
 </head>
 <body>
@@ -17,13 +18,13 @@
             padding: 10px 10px 10px 10px;
             width:100%;
             position:fixed;
-            top:2px;
+            top:0px;
 
         }
 
         #banner img{
-            width:30%;
-            height: 30%;
+            width:250px;
+            height: 300px;
             float: left;
             margin-right: 30px;
         }
@@ -35,8 +36,14 @@
             }
 
         #container {
-            margin:250px 200px 150px 10px;
-            
+            /*margin:250px 200px 150px 10px;*/
+            display:grid;
+            place-items: center;
+        }
+
+        .ls-produto{
+            width: 700px;
+            margin-top: 250px;
         }
         #container img{
             height: 100px;
@@ -44,7 +51,7 @@
             padding-left: 10px;
         }
         .produto{
-            border: solid rgb(132, 133, 192) 5px;
+            border: solid rgb(132, 133, 192) 3px;
             height: 210px;
             width: 190px;
             float: left;
@@ -52,8 +59,8 @@
             
         }
         .produto img{
-            width: 70%;
-            height: 70%;
+            width: 60%;
+            height: 60%;
         }
         .produto .nome{ 
             background-color: bisque;
@@ -68,20 +75,35 @@
            display:flex;
         }
 
+        #bt-fixo{
+            background-color: aqua;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border:solid black 3px;
+            position: fixed;
+            bottom:30px;
+            right: 10%;
+        }
+
         /* Configuração para telas menores de 700px*/ 
 
         @media only screen and (max-width: 700px){
             #banner{
                 padding:10px 10px 10px 10px;
-                margin:10px;
-                top:2px;
+                /*margin:0px;
+                top:0px;*/
             }
-            #container{
-                margin: 250px 30px  0px 300px;
-            }
-            body{
-                background-color: rgb(238, 236, 233);
-            }
+               
+            h1{
+                font-size:40px;
+                              }
+            #bt-fixo{
+                right: 30px;
+            }                  
         }
     </style>
 
@@ -90,37 +112,42 @@
         <h1>Virtual Eletronicos</h1>
     </div>
     <div id="container">
-        <div class="produto">
-            <img src="imagens/resistor.webp" alt="">
-            <p class="nome">Nome do Produto</p>
-            <p class="valor">R$ 0,30</p>
+        <div class="ls-produto">
+            <div class="produto">
+                <img src="imagens/resistor.webp" alt="">
+                <p class="nome">Nome do Produto</p>
+                <p class="valor">R$ 0,30</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/capacitor ceramico.webp" alt="">
+                <p class="nome">Nome do Produto</p>
+                <p class="valor">R$ 0,30</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/Diodo zener.webp" alt="">
+                <p class="nome">Nome do Produto</p>
+                <p class="valor">R$ 1,00</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/Ferro de solda.webp" alt="">
+                <p class="nome">Nome do Produto</p>
+                <p class="valor">R$ 40,00</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/ci 555.webp" alt="">
+                <p class="nome">Nome do Produto</p>
+                <p class="valor">R$ 4,30</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/Multimero digital.webp" alt="">
+                <p class="nome">Nome do Produto</p>
+                <p class="valor">R$ 80,00</p>
+            </div>
         </div>
-        <div class="produto">
-            <img src="imagens/capacitor ceramico.webp" alt="">
-            <p class="nome">Nome do Produto</p>
-            <p class="valor">R$ 0,30</p>
+        <div id="bt-fixo">
+            <i style="font-size:52px" class="fa">&#xf07a;</i>
         </div>
-        <div class="produto">
-            <img src="imagens/Diodo zener.webp" alt="">
-            <p class="nome">Nome do Produto</p>
-            <p class="valor">R$ 1,00</p>
-        </div>
-        <div class="produto">
-            <img src="imagens/Ferro de solda.webp" alt="">
-            <p class="nome">Nome do Produto</p>
-            <p class="valor">R$ 40,00</p>
-        </div>
-        <div class="produto">
-            <img src="imagens/ci 555.webp" alt="">
-            <p class="nome">Nome do Produto</p>
-            <p class="valor">R$ 4,30</p>
-        </div>
-        <div class="produto">
-            <img src="imagens/Multimero digital.webp" alt="">
-            <p class="nome">Nome do Produto</p>
-            <p class="valor">R$ 80,00</p>
-        </div>
-
+    </div>
 
 </body>
 </html>
