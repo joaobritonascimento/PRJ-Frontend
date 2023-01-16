@@ -36,7 +36,6 @@
             }
 
         #container {
-            /*margin:250px 200px 150px 10px;*/
             display:grid;
             place-items: center;
         }
@@ -148,7 +147,7 @@
                 <p class="nome">Nome do Produto</p>
                 <p class="valor">R$ 0,30</p>
             </div>
-            <div class="produto">
+            <div class="produto" onclick="addCarrinho(this)">
                 <img src="imagens/capacitor ceramico.webp" alt="">
                 <p class="nome">Nome do Produto</p>
                 <p class="valor">R$ 0,30</p>
@@ -161,7 +160,7 @@
             <div class="produto">
                 <img src="imagens/Ferro de solda.webp" alt="">
                 <p class="nome">Nome do Produto</p>
-                <p class="valor">R$ 40,00</p>
+                <p class="valor">R$ 45,00</p>
             </div>
             <div class="produto">
                 <img src="imagens/ci 555.webp" alt="">
@@ -182,8 +181,14 @@
         </div>
     </div>
     <script>
-        function addCarrinho(){
+        function addCarrinho(elemento){
+            if(elemento.classList.length == 2){
+            document.getElementById("qt-produto").innerHTML=0;
+            elemento.classList.remove("produto-selecionado");
+        } else{
             document.getElementById("qt-produto").innerHTML=1;
+            elemento.classList.add("produto-selecionado");
+        }
         }
     </script>
 </body>
