@@ -190,6 +190,18 @@
             elemento.classList.add("produto-selecionado");
         }
         }
+        xhttp = new XMLHttpRequest();
+
+        function buscarProduto(){
+            xhttp.open("GET","https://joaobritonascimento.github.io/PRJ-Frontend/prj-loja-01/fake-api/produto.js");
+            xhttp.send();
+            xhttp.onload = function (){
+                console.log(this.responseText);
+            }
+        }
+        
+        buscarProduto();
+
     </script>
 </body>
 </html>
