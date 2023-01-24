@@ -137,11 +137,11 @@
     </style>
 
     <div id="banner">
-        <img src="imagens/comp.jpeg" style="height: 220px; align-items: center;" alt="">
+        <img src="fake-api/imagens/Imagens_banner.jpeg" style="height: 220px; align-items: center;" alt="">
         <h1>Virtual Eletronicos</h1>
     </div>
     <div id="container">
-        <div class="ls-produto" id="ls-produto">
+        <div class="ls-produto" id="lsProduto">
             
             </div>        
         </div>
@@ -153,12 +153,15 @@
         </div>
     </div>
     <script>
+        qtCarrinho = 0;
         function addCarrinho(elemento){
             if(elemento.classList.length == 2){
-            document.getElementById("qt-produto").innerHTML=0;
+            qtCarrinho--;    
+            document.getElementById("qt-produto").innerHTML=qtCarrinho;
             elemento.classList.remove("produto-selecionado");
         } else{
-            document.getElementById("qt-produto").innerHTML=1;
+            qtCarrinho++;
+            document.getElementById("qt-produto").innerHTML=qtCarrinho;
             elemento.classList.add("produto-selecionado");
         }
         }
@@ -184,8 +187,10 @@
                 <p class="nome">${produto.nome}</p>
                 <p class="valor">R$ ${produto.valor}</p>
             </div>` ;
+                produto.carrinho = false;
+
             }
-            document.getElementById("ls-produto").innerHTML = txProduto;
+            document.getElementById("lsProduto").innerHTML = txProduto;
         }
 
         buscarProduto();
