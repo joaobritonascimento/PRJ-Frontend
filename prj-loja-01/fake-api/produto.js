@@ -1,3 +1,6 @@
+
+//Objetos JSON dentro de um Array
+
 [
     {"nome":"","img":"/home/ec2-user/PRJ-Frontend/prj-loja-01/fake-api/imagens/capacitor_ceramico.webp","valor":1.20},
     {"nome":"","img":"/home/ec2-user/PRJ-Frontend/prj-loja-01/fake-api/imagens/ci_555.webp","valor":7.00},
