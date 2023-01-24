@@ -141,37 +141,9 @@
         <h1>Virtual Eletronicos</h1>
     </div>
     <div id="container">
-        <div class="ls-produto">
-            <div class="produto" onclick="addCarrinho(this)">
-                <img src="imagens/resistor.webp" alt="">
-                <p class="nome">Nome do Produto</p>
-                <p class="valor">R$ 0,30</p>
-            </div>
-            <div class="produto" onclick="addCarrinho(this)">
-                <img src="imagens/capacitor ceramico.webp" alt="">
-                <p class="nome">Nome do Produto</p>
-                <p class="valor">R$ 0,30</p>
-            </div>
-            <div class="produto">
-                <img src="imagens/Diodo zener.webp" alt="">
-                <p class="nome">Nome do Produto</p>
-                <p class="valor">R$ 1,00</p>
-            </div>
-            <div class="produto">
-                <img src="imagens/Ferro de solda.webp" alt="">
-                <p class="nome">Nome do Produto</p>
-                <p class="valor">R$ 45,00</p>
-            </div>
-            <div class="produto">
-                <img src="imagens/ci 555.webp" alt="">
-                <p class="nome">Nome do Produto</p>
-                <p class="valor">R$ 4,30</p>
-            </div>
-            <div class="produto">
-                <img src="imagens/Multimero digital.webp" alt="">
-                <p class="nome">Nome do Produto</p>
-                <p class="valor">R$ 80,00</p>
-            </div>
+        <div class="ls-produto" id="ls-produto">
+            
+            </div>        
         </div>
         <div id="bt-fixo">
             <div id="bt-principal">
@@ -196,10 +168,26 @@
             xhttp.open("GET","https://joaobritonascimento.github.io/PRJ-Frontend/prj-loja-01/fake-api/produto.js");
             xhttp.send();
             xhttp.onload = function (){
-                console.log(this.responseText);
+                lsProduto = this.responseText;
+                lsProduto = JSON.parse(lsProduto);
+                clonarProdutos(lsProduto);
             }
         }
         
+        function clonarProdutos(lsProduto){
+            txProduto = "";
+            for (produto of lsProduto){
+                console.log(produto);
+                txProduto +=`
+                <div class="produto" onclick="addCarrinho(this)">
+                <img src="${produto.img}" alt="">
+                <p class="nome">${produto.nome}</p>
+                <p class="valor">R$ ${produto.valor}</p>
+            </div>` ;
+            }
+            document.getElementById("ls-produto").innerHTML = txProduto;
+        }
+
         buscarProduto();
 
     </script>
