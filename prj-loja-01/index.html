@@ -139,20 +139,21 @@
 
         table {
             width: 100%;
+            padding: 20%;
         }
 
         tr {
-            height: 30px;
-            background-color: gray;
-            text-align: center;
+            height: 50px;
+            background-color: rgb(168, 197, 130);
+            /*text-align: center;*/
+           
+            }
 
-        }
-
-        tr span {
-            background-color: black;
+        tr span{
+            background-color: red;
             color: white;
-            height: 100%;
-            padding: 6%;
+            height: 6%;
+            padding: 30%;
             margin-right: 2px;
             margin-left: 2px;
             cursor: pointer;
@@ -165,19 +166,24 @@
         }
 
         #nome {
-            background-color: gray;
+            background-color: rgb(168, 197, 130);;
             width: 70%;
             height: 30px;
             border: none;
         }
 
         #bt-enviar {
-            background-color: black;
+            background-color: red;
             color: white;
             font-size: 20px;
             cursor: pointer;
             padding: 5px;
         }
+
+        tbody{
+            display: table-row-group;
+            vertical-align: middle;
+                    }
     </style>
 
     <div id="banner">
@@ -195,12 +201,12 @@
                         <th>Valor Total</th>
                     </tr>
                 </thead>
-                <tbody>
-                </tbody>
+                <tbody></tbody>
             </table>
             <label for="nome">Nome</label><br>
             <input type="text" id="nome">
             <input type="button" id="bt-enviar" value="Enviar Pedido" onclick="enviarWhatsApp()">
+            
         </div>
         <div class="ls-produto" id="lsProduto">
         </div>
@@ -209,6 +215,7 @@
             <i style="font-size:54px" class="fa">&#xf07a;</i>
             <span id="qt-produto">0</span>
         </div>
+      
     </div>
     <script>
         qtCarrinho = 0;
@@ -317,9 +324,9 @@
             }
             carrinho();
             
-            tr = document.getElementsByTagName("tr")[it];
-            tr.getElementsByTagName("td")[2].innerHTML = p.quantidade;
-            tr.getElementsByTagName("td")[3].innerHTML = p.valorParcial;
+            //tr = document.getElementsByTagName("tr")[it];
+            //tr.getElementsByTagName("td")[2].innerHTML = p.quantidade;
+            //tr.getElementsByTagName("td")[3].innerHTML = p.valorParcial;
         }
 
         function enviarWhatsApp() {
@@ -333,7 +340,7 @@
             }
 
             if (qtCarrinho == 0) {
-                alert("Escolha 1 produto");
+                alert("Você ainda não selecionou o produto");
                 return false;
             }
 
