@@ -37,7 +37,7 @@
 
         #lsQuantidade {
             width: 700px;
-            margin-top: 106px;
+            margin-top: 10px;
             display: none;
         }
 
@@ -129,20 +129,20 @@
 
         table {
             width: 100%;
-            padding: 20%;
+            padding-top: 35%;
         }
 
         tr {
-            height: 50px;
-            background-color: rgb(168, 197, 130);
-            /*text-align: center;*/
+            height: 150%;
+            background-color: rgb(137, 196, 204);
+            text-align: center;
            
             }
 
         tr span{
             background-color: red;
             color: white;
-            height: 6%;
+            height: 50%;
             padding: 30%;
             margin-right: 2px;
             margin-left: 2px;
