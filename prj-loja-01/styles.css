@@ -1,0 +1,177 @@
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #banner{
+            background-color: black;
+            padding: 10px 10px 10px 10px;
+            width:100%;
+            position:fixed;
+            top:0px;
+
+        }
+
+        #banner img{
+            width:250px;
+            height: 300px;
+            float: left;
+            margin-right: 30px;
+        }
+
+        #banner h1{
+            color: aqua;
+            text-align: center;
+            margin-top: auto;
+            }
+
+        #container {
+            display:grid;
+            place-items: center;
+        }
+
+        .ls-produto{
+            width: 700px;
+            margin-top: 250px;
+        }
+
+        #lsQuantidade {
+            width: 700px;
+            margin-top: 106px;
+            display: none;
+        }
+
+        .produto{
+            border: solid rgb(132, 133, 192) 3px;
+            height: 210px;
+            width: 190px;
+            float: left;
+            margin: 10px; /*Distancia entre os produtos*/
+            cursor:pointer;
+            /*border-color: aqua;*/
+        }
+
+        .produto-selecionado{
+            border-color: aqua;
+        }
+        .produto img{
+            width: 60%;
+            height: 60%;
+        }
+        .produto .nome{ 
+            background-color: bisque;
+            color:rgb(29, 23, 2);
+            height: 15%;
+            display:flex;
+            justify-content: center;
+        }
+
+        .produto .valor{
+           display:flex;
+           align-items:center;
+           height: 15%;
+           padding-left:10px ;
+                      
+        }
+
+        #bt-fixo{
+            background-color: aqua;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border:solid black 3px;
+            position: fixed;
+            bottom:30px;
+            right: 10%;
+        }
+
+        #bt-fixo, #bt-fixo span {
+            background-color: aqua;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border:solid black 3px;
+            position: fixed;
+            bottom:30px;
+            right: 30%;
+             }
+
+        #bt-fixo span{
+            width: 20px;
+            height: 20px;
+            bottom: 95px;
+            background-color: black;
+            color:aqua;
+        }
+
+        /* Configuração para telas menores de 700px*/ 
+
+        @media only screen and (max-width: 700px){
+            #banner{
+                padding:10px 10px 10px 10px;
+                /*margin:0px;
+                top:0px;*/
+            }
+               
+            h1{
+                font-size:40px;
+                              }
+            #bt-fixo{
+                right: 30px;
+            }                  
+        }
+
+        table {
+            width: 100%;
+            padding: 20%;
+        }
+
+        tr {
+            height: 50px;
+            background-color: rgb(168, 197, 130);
+            /*text-align: center;*/
+           
+            }
+
+        tr span{
+            background-color: red;
+            color: white;
+            height: 6%;
+            padding: 30%;
+            margin-right: 2px;
+            margin-left: 2px;
+            cursor: pointer;
+            float: left;
+            width: 20px;
+        }
+
+        label {
+            font-size: larger;
+        }
+
+        #nome {
+            background-color: rgb(168, 197, 130);;
+            width: 70%;
+            height: 30px;
+            border: none;
+        }
+
+        #bt-enviar {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        tbody{
+            display: table-row-group;
+            vertical-align: middle;
+                    }
+    
